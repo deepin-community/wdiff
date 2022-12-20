@@ -1,0 +1,27 @@
+Source: wdiff
+Section: text
+Priority: optional
+Maintainer: Santiago Vila <sanvila@debian.org>
+Build-Depends: debhelper (>= 9.20120311), texinfo, libncurses5-dev
+Standards-Version: 3.9.8
+Homepage: http://www.gnu.org/software/wdiff/
+
+Package: wdiff
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: wdiff-doc
+Description: Compares two files word by word
+ `wdiff' is a front-end to GNU `diff'.  It compares two files, finding
+ which words have been deleted or added to the first in order to create
+ the second.  It has many output formats and interacts well with
+ terminals and pagers (notably with `less').  `wdiff' is particularly
+ useful when two texts differ only by a few words and paragraphs have
+ been refilled.
+
+Package: wdiff-doc
+Section: doc
+Priority: optional
+Architecture: all
+Depends: ${misc:Depends}
+Description: Documentation for GNU wdiff
+ This package contains the HTML documentation for GNU wdiff.
