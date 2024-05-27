@@ -1,8 +1,40 @@
-wdiff (1.2.2-deepin1) unstable; urgency=medium
+wdiff (1.2.2-6) unstable; urgency=medium
 
-  * Rebuild
+  * Create debian/clean, containing a list of files which are re-created
+    during the build. Closes: #1046997.
 
- -- Deepin Packages Builder <packages@deepin.org>  Mon, 14 Nov 2022 17:49:28 +0800
+ -- Santiago Vila <sanvila@debian.org>  Thu, 14 Sep 2023 23:35:00 +0200
+
+wdiff (1.2.2-5) unstable; urgency=medium
+
+  * Change libncurses5-dev to libncurses-dev in Build-Depends.
+  * Call makeinfo using --output option. This allows the package to be
+    built with Texinfo 7. Thanks to Hilmar Preusse. Closes: #1030370.
+  * Run wrap-and-sort.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 03 Feb 2023 18:50:00 +0100
+
+wdiff (1.2.2-4) unstable; urgency=medium
+
+  * Include upstream signature.
+  * Use a common debian/watch file which is valid for most GNU packages.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 20 Dec 2022 22:44:00 +0100
+
+wdiff (1.2.2-3) unstable; urgency=medium
+
+  * Mark all packages Multi-Arch: foreign. Closes: #930459.
+    Thanks to Helmut Grohne.
+  * Trim trailing whitespace.
+  * Use secure URI in debian/watch.
+  * Use secure URI in Homepage field.
+  * Raise debhelper compat level from 9 to 13.
+  * Set upstream metadata fields Bug-Submit and Name.
+  * Remove field Priority on binary package wdiff-doc.
+  * Update watch file format version to 4.
+  * Update standards version to 4.6.1.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 13 Dec 2022 19:45:00 +0100
 
 wdiff (1.2.2-2) unstable; urgency=medium
 
@@ -125,7 +157,7 @@ wdiff (0.5-20) unstable; urgency=low
   * Switch to 3.0 (quilt) source format, 11 patches.
   * Use strip, not INSTALL_PROGRAM.
   * Added homepage.
-  
+
  -- Santiago Vila <sanvila@debian.org>  Tue, 23 Feb 2010 21:32:54 +0100
 
 wdiff (0.5-19) unstable; urgency=low
@@ -136,7 +168,7 @@ wdiff (0.5-19) unstable; urgency=low
   * Do not ignore errors from make distclean.
   * Removed useless calls to install-docs.
   * Added watch file.
-  
+
  -- Santiago Vila <sanvila@debian.org>  Sun, 30 Aug 2009 19:33:10 +0200
 
 wdiff (0.5-18) unstable; urgency=medium
@@ -146,40 +178,40 @@ wdiff (0.5-18) unstable; urgency=medium
   * Fixed -V option in manpage. Closes: #438461.
   * Do not pass -split_chapter to texi2html.
   * Moved doc-base file to Text section.
-  
+
  -- Santiago Vila <sanvila@debian.org>  Tue, 17 Jun 2008 19:27:00 +0200
 
 wdiff (0.5-17) unstable; urgency=low
 
   * Updated FSF postal address in copyright file.
-  
+
  -- Santiago Vila <sanvila@debian.org>  Wed, 25 Apr 2007 10:00:02 +0200
 
 wdiff (0.5-16) unstable; urgency=low
 
   * Changed index.html to point to wdiff.html in wdiff-doc, as the new
     texi2html does not want to generate wdiff_toc.html anymore. Strange.
-  
+
  -- Santiago Vila <sanvila@debian.org>  Sun, 17 Jul 2005 17:05:02 +0200
 
 wdiff (0.5-15) unstable; urgency=low
 
   * Fixed FTBFS bug caused by new texi2html behaviour (Closes: #318566).
   * Changed doc-base and copyright files to UTF-8.
-  
+
  -- Santiago Vila <sanvila@debian.org>  Sat, 16 Jul 2005 19:10:54 +0200
 
 wdiff (0.5-14) unstable; urgency=low
 
   * Do not repeat the program name in the short description.
-  
+
  -- Santiago Vila <sanvila@debian.org>  Tue,  7 Oct 2003 18:42:10 +0200
 
 wdiff (0.5-13) unstable; urgency=low
 
   * Made wdiff -i to work, as stated by wdiff --help (Closes: #159742).
   * Standards-Version: 3.5.7.
-  
+
  -- Santiago Vila <sanvila@debian.org>  Thu,  5 Sep 2002 19:13:24 +0200
 
 wdiff (0.5-12) unstable; urgency=low
@@ -187,14 +219,14 @@ wdiff (0.5-12) unstable; urgency=low
   * Build-Depends-Indep: texi2html, not tetex-bin.
   * Added support for DEB_BUILD_OPTIONS.
   * Added doc-base support.
-  
+
  -- Santiago Vila <sanvila@debian.org>  Tue,  5 Mar 2002 19:16:24 +0100
 
 wdiff (0.5-11) unstable; urgency=low
 
   * Build-Depends: libncurses-dev, texinfo.
   * Build-Depends-Indep: tetex-bin.
-  
+
  -- Santiago Vila <sanvila@debian.org>  Thu,  4 Jan 2001 15:50:03 +0100
 
 wdiff (0.5-10) unstable; urgency=low
