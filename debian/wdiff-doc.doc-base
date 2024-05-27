@@ -12,5 +12,5 @@ Abstract: This manual documents GNU wdiff.
 Section: Text
 
 Format: HTML
-Index: /usr/share/doc/wdiff-doc/index.html
-Files: /usr/share/doc/wdiff-doc/*.html
+Index: /usr/share/doc/wdiff/index.html
+Files: /usr/share/doc/wdiff/*.html
